@@ -12,15 +12,11 @@ public class pgm8 {
 
         System.out.println("Leap years between " + startYear + " and " + endYear + " are:");
         for (int year = startYear; year <= endYear; year++) {
-            if (isLeapYear(year)) {
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
                 System.out.println(year);
             }
         }
 
         scanner.close();
-    }
-
-    public static boolean isLeapYear(int year) {
-        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 }
